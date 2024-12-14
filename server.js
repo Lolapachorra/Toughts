@@ -4,7 +4,7 @@ const { engine } = require("express-handlebars");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const flash = require("express-flash");
-const cors = require('cors')
+
 const port = 3000;
 //cors
 
