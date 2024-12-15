@@ -10,8 +10,8 @@ const Tought = db.define("Tought", {
     require: true,
     validate: {
       len: {
-        args: [1, 100], // Define o limite entre 1 e 100 caracteres
-        msg: "O Pensamento deve ter entre 1 e 100 caracteres.",
+        args: [1, 72], // Define o limite entre 1 e 72 caracteres
+        msg: "O Pensamento deve ter entre 1 e 72 caracteres.",
       },
     },
   },
