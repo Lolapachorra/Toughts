@@ -92,14 +92,14 @@ module.exports = class ToughtController {
       req.session.save(() => {
         res.redirect("/toughts/dashboard");
       });
-    } catch (err) {
+    }  catch (err) {
       console.error(err.message);
       req.flash(
-        "message",
-        "Ocorreu um erro ao tentar cadastrar a Tought, tente novamente!"
+          "message",
+          "Ocorreu um erro: " + err.errors[0].message // Captura a mensagem de validação
       );
       res.render("toughts/create");
-    }
+  }
   }
 
   static async removeTought(req, res) {
