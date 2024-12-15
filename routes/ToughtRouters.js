@@ -12,5 +12,6 @@ router.post('/edit/', checkAuth, ToughtController.updateToughtPost)
 router.get('/dashboard', checkAuth, ToughtController.dashboard)
 router.post('/remove', checkAuth, ToughtController.removeTought)
 router.get('/', ToughtController.showToughts)
+router.post('/addLike/:id', ToughtController.addLike)
 
 module.exports = router
